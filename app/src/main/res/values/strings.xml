@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">InfoGunung</string>
+    <string name="about_me">About Me</string>
+    <string name="splashscreen_text">Info Gunung</string>
+    <string name="item_title">Item Title</string>
+    <string name="details">Details</string>
+    <string name="detail">Detail</string>
+    <string name="name">Name</string>
+    <string name="share">Share</string>
+</resources>
