@@ -1,2 +1,2 @@
-# info-gunung
-simple android project based on my android learning, every 1 month i will update my project
+# info-gunung ⛰️
+Simple android project based on my android learning, including Activity, Intent, Recycler View.
