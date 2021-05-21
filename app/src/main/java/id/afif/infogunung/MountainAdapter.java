@@ -29,7 +29,7 @@ public class MountainAdapter extends RecyclerView.Adapter<MountainAdapter.Mounta
     @NonNull
     @Override
     public MountainViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_card_list, parent, false);
         return new MountainViewHolder(view);
     }
 

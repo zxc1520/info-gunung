@@ -1,84 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="100">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="70"
-        android:id="@+id/img_item"
-        android:src="@mipmap/ic_launcher"
-        android:layout_marginBottom="8dp"
-        android:scaleType="centerCrop"/>
-
-    <TextView
-        android:id="@+id/detail_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/name"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/detail_detail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail"
-        android:textSize="16sp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:ellipsize="end" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="Diunggah Oleh"/>
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp">
+        android:orientation="vertical"
+        android:weightSum="100">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imgProp"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="16dp"
-            android:src="@mipmap/img_me_round"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:id="@+id/img_item"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginBottom="8dp"
+            android:scaleType="fitXY"/>
 
         <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="match_parent"
+            android:id="@+id/detail_name"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_toEndOf="@id/imgProp"
-            android:text="Afif Ghulam"
-            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:text="@string/name"
+            android:textSize="20sp"
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/tv_level"
+            android:id="@+id/detail_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:ellipsize="end" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Diunggah Oleh"/>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_toEndOf="@id/imgProp"
-            android:layout_below="@id/tv_name"
-            android:text="Admin"/>
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
 
-    </RelativeLayout>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgProp"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:src="@mipmap/img_me_round"/>
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_toEndOf="@id/imgProp"
+                android:text="Afif Ghulam"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_toEndOf="@id/imgProp"
+                android:layout_below="@id/tv_name"
+                android:text="Admin"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

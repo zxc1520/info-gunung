@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 
 import java.util.ArrayList;
 
@@ -37,10 +39,7 @@ public class MainActivity extends AppCompatActivity {
         rvMountain.setLayoutManager(new LinearLayoutManager(this));
         MountainAdapter mountainAdapter = new MountainAdapter(list);
         rvMountain.setAdapter(mountainAdapter);
-    }
 
-    private void showToast(Mountain mountain) {
-        Toast.makeText(this, "Memilih: " + mountain.getName(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -62,6 +61,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(in);
                 break;
         }
+    }
+
+    private void animate(RecyclerView recyclerView) {
+        Context context = recyclerView.getContext();
+        LayoutAnimationController layoutAnimationController = AnimationUtils
+                .loadLayoutAnimation(context, R.anim.item_down);
+
+        recyclerView.setLayoutAnimation(layoutAnimationController);
+        recyclerView.getAdapter().notifyDataSetChanged();
+        recyclerView.scheduleLayoutAnimation();
     }
 
 }
